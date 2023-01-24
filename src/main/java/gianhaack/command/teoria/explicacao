@@ -1,0 +1,24 @@
+Command é um padrão comportamental.
+
+Inteção oficial
+
+Encapsular uma solicitação como um objeto, desta forma permitindo que você parametrize clientes com
+diferentes solicitações, efileire ou registre (log) solicitações e suporte operações que podem ser desfeitas.
+
+
+Aplicabilidade
+Use o Command quando:
+- você quer desacoplar o objeto que envia a solicitação do objeto que a receberá
+- você quer tratar um comando como um objeto (com a possibilidade de armazenar, agendar, efileirar, fazer log,
+    agenda execuções, ou fazer qualquer coisa que pode ser feito com um objeto)
+- você quer permitir que solicitações possam ser feitas e desfeitas
+
+Consequências
+BOM:
+- você pode criar comandos simples e complexos (ou até compostos de outros comandos)
+- você pode implementar fazer e desfazer
+- comandos são objetos normais, portando podem fazer tudo que objetos normais fazem
+- desacopla o objeto que envia do objeto que recebe a solicitação
+
+RUIM:
+- Muitas classes podem torna o sistemas mais complexo
